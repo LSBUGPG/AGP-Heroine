@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour {
 		} else if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
 		{
 			rb.velocity = Vector2.up * jumpForce;
-            //anim.SetBool("InAir", false);
+            anim.SetBool("InAir", true);
 		}
 	}
 
