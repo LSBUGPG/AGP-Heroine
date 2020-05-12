@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	private Animator anim;
 
 	private bool isGrounded;
+    private bool inAir;
 	public Transform groundCheck;
 	public float checkRadius;
 	public LayerMask whatIsGround;
@@ -60,20 +61,28 @@ public class PlayerController : MonoBehaviour {
 
 	void Update (){
 
-		if (isGrounded == true) {
-			extraJumps = extraJumpsValue;
-            anim.SetBool("InAir", false);
+        if (!inAir && !isGrounded)
+        {
+            inAir = true;
         }
+        else if (inAir && isGrounded)
+        {
+            inAir = false;
+			extraJumps = extraJumpsValue;
+        }
+        anim.SetBool("InAir", inAir);
 
-		if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
+		if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps >= 0)
 		{
 			rb.velocity = Vector2.up * jumpForce;
 			extraJumps--;
+
             anim.SetBool("InAir", true);
 		} else if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
-		{
+		{   
 			rb.velocity = Vector2.up * jumpForce;
             anim.SetBool("InAir", true);
+
 		}
 	}
 
