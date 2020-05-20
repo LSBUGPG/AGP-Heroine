@@ -19,6 +19,8 @@ public class JumpPad : MonoBehaviour
                 ().AddForce(Vector3.up * speed);
             gasPlant.SetTrigger("Contact");
             Instantiate(gas, transform.position, transform.rotation);
+            FindObjectOfType<AudioManager>().Play("Gas");
+            FindObjectOfType<AudioManager>().Play("Peel");
         }
     }
 }

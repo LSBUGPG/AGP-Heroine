@@ -53,6 +53,7 @@ public class WaveSpawner : MonoBehaviour
             triggered = true;
             door1.SetTrigger("DoorClose");
             door2.SetTrigger("DoorClose");
+            FindObjectOfType<AudioManager>().Play("Rumble");
         }
     }
 
@@ -102,6 +103,7 @@ public class WaveSpawner : MonoBehaviour
             nextWave = 0;
             door1.SetTrigger("DoorOpen");
             door2.SetTrigger("DoorOpen");
+            FindObjectOfType<AudioManager>().Play("Rumble");
         }
         else
         {

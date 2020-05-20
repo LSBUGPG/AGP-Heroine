@@ -35,6 +35,7 @@ public class PlayerAttack : MonoBehaviour
                 if (!currentWeapon)
                 {
                     AttackAnimLight();
+                    FindObjectOfType<AudioManager>().Play("SwingLight");
                     //playerAnim.SetInteger("LightAnim", Random.Range(1, 4));
                    // DoAttack(0);
                 }

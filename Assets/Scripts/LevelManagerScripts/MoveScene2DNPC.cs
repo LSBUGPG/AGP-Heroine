@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MoveScene2DNPC : MonoBehaviour
 {
-    
 
-       [SerializeField] private string newLevel;
+
+         public int level = 0;
 
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("NPC"))
             {
-                SceneManager.LoadScene(newLevel);
+                FindObjectOfType<LevelLoader>().LoadLevel(level);
             }
         }
 

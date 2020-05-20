@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4793231786326842227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4793231786326842237}
+  - component: {fileID: 4793231786326842236}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4793231786326842237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793231786326842227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4793231786326842236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793231786326842227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82144535d0efb5b46a08c65e0b8f7057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: 0ea52b3a415faa64dac1426dbd18ce17, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SwingLight
+    clip: {fileID: 8300000, guid: 9f2338b6ee26cd94c87141fdca9947b8, type: 3}
+    volume: 0.841
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Stab
+    clip: {fileID: 8300000, guid: bcfd1533206655d4bbbab0fc282fae89, type: 3}
+    volume: 0.925
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Step1
+    clip: {fileID: 8300000, guid: 8fae5dd155e13b9498e15818cfc3b9cc, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Step2
+    clip: {fileID: 8300000, guid: 67f95459edc2c34438bbfb4c7fe88449, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gas
+    clip: {fileID: 8300000, guid: 23eb93023d0fb18449e6cb774e559dda, type: 3}
+    volume: 0.335
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: fbd4c92deceaa5d40b2eeddb5070d50f, type: 3}
+    volume: 1
+    pitch: 0.61
+    loop: 0
+    source: {fileID: 0}
+  - name: Land
+    clip: {fileID: 8300000, guid: 8ed2971fdcb5f30499104215c2881a39, type: 3}
+    volume: 0.061
+    pitch: 0.61
+    loop: 0
+    source: {fileID: 0}
+  - name: WMKDmg
+    clip: {fileID: 8300000, guid: 816234a33ae3c9743839c3b3cfdc3e78, type: 3}
+    volume: 0.061
+    pitch: 0.61
+    loop: 0
+    source: {fileID: 0}
+  - name: WMKDie
+    clip: {fileID: 8300000, guid: acd3365d625693a4cadfa7d6bc47acac, type: 3}
+    volume: 0.061
+    pitch: 0.61
+    loop: 0
+    source: {fileID: 0}
+  - name: WMKExplode
+    clip: {fileID: 8300000, guid: 2f4d544bb4d46a04a9b8c2effea5f82f, type: 3}
+    volume: 0.731
+    pitch: 0.61
+    loop: 0
+    source: {fileID: 0}
+  - name: PoppyDmg
+    clip: {fileID: 8300000, guid: 4b8bf7c545bb06c40a6255a1e3546b67, type: 3}
+    volume: 0.366
+    pitch: 1.13
+    loop: 0
+    source: {fileID: 0}
+  - name: Peel
+    clip: {fileID: 8300000, guid: 8cc974e0f65a64e4086a826911f28061, type: 3}
+    volume: 0.307
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Page
+    clip: {fileID: 8300000, guid: 422aa2fa9b783f84aa356376356e4cf6, type: 3}
+    volume: 0.362
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Rumble
+    clip: {fileID: 8300000, guid: 944aceef9e46eb448a9733d2268e8aa3, type: 3}
+    volume: 0.362
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

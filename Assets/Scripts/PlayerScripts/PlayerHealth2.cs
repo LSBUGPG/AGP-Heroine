@@ -13,6 +13,8 @@ public class PlayerHealth2 : MonoBehaviour
     public Sprite emptyHeart;
     private PlayerController player;
     bool playerIsDead = false;
+    public Animator animator;
+    //public GameObject
 
     private void Start()
     {
@@ -33,11 +35,15 @@ public class PlayerHealth2 : MonoBehaviour
     public void DamagePlayer(int damage)
     {
         playerStats.Health -= damage;
+        FindObjectOfType<AudioManager>().Play("PoppyDmg");
         if (playerStats.Health <= 0 && playerIsDead == false)
         {
             FindObjectOfType<LevelManager>().EndGame();
             playerIsDead = true;
             //Destroy(gameObject);
+            gameObject.SetActive(false);
+            animator.SetTrigger("Start");
+
 
         }
     }

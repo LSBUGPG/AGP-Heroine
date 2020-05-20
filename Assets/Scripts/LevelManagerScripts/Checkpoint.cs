@@ -18,8 +18,8 @@ public class Checkpoint : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        player = FindObjectOfType<PlayerController>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

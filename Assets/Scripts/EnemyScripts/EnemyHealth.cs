@@ -26,6 +26,8 @@ public class EnemyHealth : MonoBehaviour
             
             Instantiate(blood, transform.position, transform.rotation);
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("WMKDie");
+            FindObjectOfType<AudioManager>().Play("WMKExplode");
         }
     }
 
@@ -34,6 +36,8 @@ public class EnemyHealth : MonoBehaviour
     {
         health -= damage;
         Debug.Log("damage TAKEN !");
+        FindObjectOfType<AudioManager>().Play("Stab");
+        FindObjectOfType<AudioManager>().Play("WMKDmg");
     }
 
     
